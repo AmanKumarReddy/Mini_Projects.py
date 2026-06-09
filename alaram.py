@@ -9,7 +9,6 @@ class AlarmClock:
         self.root = root
         self.root.title("Python Alarm Clock")
         self.root.geometry("400x350")
-        self.root.resizable(False, False)
 
         # Current Time Display
         self.current_time_label = tk.Label(self.root, text="", fg="darkblue", font=("Helvetica", 14, "bold"))
