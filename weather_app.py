@@ -43,9 +43,10 @@ class WeatherApp:
             if response.status_code == 200:
                 city_name = data['name']
                 temp = data['main']['temp']
+                country = data["sys"]["country"]
                 description = data['weather'][0]['description']
 
-                self.city_label.config(text=city_name)
+                self.city_label.config(text=f"{city_name},  {country}")
                 self.temp_label.config(text=f"{temp}°C")
                 self.desc_label.config(text=description.capitalize())
             else:
